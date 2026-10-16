@@ -66,7 +66,17 @@ class Program
         decimal pi = 0.0m; // m means decimal number type
 
         // TODO: Calculate Pi
-
+        int insideCircle = 0;
+        for (int i = 0;i < n; i++)
+        {
+            double x = rand.NextDouble();
+            double y = rand.NextDouble();
+            if (x * x + y * y <= 1.0)
+            {
+                insideCircle++;
+            }
+        }
+        pi = 4.0m * insideCircle / n;
         return pi;
     }
 
